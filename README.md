@@ -4,6 +4,12 @@
 
 ---
 
+## 🌐 Live Demo
+
+- Frontend: http://eventease-frontend-xyz.s3-website-us-east-1.amazonaws.com/
+- Backend: http://100.53.32.83:8081
+
+
 ## 🛠️ Tech Stack
 
 - **Frontend:** React.js
