@@ -6,8 +6,7 @@
 
 ## 🌐 Live Demo
 
-Frontend: http://eventease-frontend-xyz.s3-website-us-east-1.amazonaws.com/
-
+http://eventease-frontend-xyz.s3-website-us-east-1.amazonaws.com/
 
 ## 🛠️ Tech Stack
 
