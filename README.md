@@ -79,73 +79,110 @@ npm install
 npm start
 React runs on http://localhost:3000, Spring Boot on http://localhost:8081.
 
-☁️ AWS Deployment
+# ☁️ AWS Deployment
 
-EventEase is deployed using AWS cloud services to simulate a production-grade full-stack architecture.
+EventEase is deployed using AWS cloud services to simulate a
+production-grade full-stack architecture.
 
-🌐 Live Architecture
-Frontend (React)
-   ↓
-AWS S3 (Static Website Hosting)
+------------------------------------------------------------------------
 
-Backend (Spring Boot)
-   ↓
-AWS EC2 Instance
+## 🌐 Live Architecture
 
-Database (MySQL)
-   ↓
-Hosted on EC2 / Docker Container
+    Frontend (React)
+       ↓
+    AWS S3 (Static Website Hosting)
 
-🚀 Frontend Deployment (AWS S3)
-React application is built using:
+    Backend (Spring Boot)
+       ↓
+    AWS EC2 Instance
+
+    Database (MySQL)
+       ↓
+    Hosted on EC2 / Docker Container
+
+------------------------------------------------------------------------
+
+## 🚀 Frontend Deployment (AWS S3)
+
+-   The React application is built using:
+
+``` bash
 npm run build
-Production build is hosted on AWS S3 Static Website Hosting
+```
 
-📌 Steps followed:
-Created S3 bucket
-Enabled static website hosting
-Uploaded React build/ contents
-Configured bucket policy for public access
+-   The production build is hosted on **AWS S3 Static Website Hosting**
 
-🌍 Live Frontend URL:
+### 📌 Steps followed:
+
+-   Created an S3 bucket
+-   Enabled static website hosting
+-   Uploaded contents of the `build/` folder
+-   Configured bucket policy for public access
+
+### 🌍 Live Frontend URL:
+
 http://eventease-frontend-xyz.s3-website-us-east-1.amazonaws.com/
 
-⚙️ Backend Deployment (AWS EC2)
-Spring Boot backend is deployed on an AWS EC2 Linux instance
-Application runs on port 8081
+------------------------------------------------------------------------
 
-📌 Steps followed:
-Installed Java on EC2
-Uploaded backend JAR file
-Configured security group to allow port 8081
-Started application using:
+## ⚙️ Backend Deployment (AWS EC2)
+
+-   Spring Boot backend is deployed on an **AWS EC2 Linux instance**
+-   Application runs on port `8081`
+
+### 📌 Steps followed:
+
+-   Installed Java on EC2 instance
+-   Uploaded backend JAR file
+-   Configured Security Group to allow port `8081`
+-   Started application using:
+
+``` bash
 java -jar backend.jar
+```
 
-🌍 Backend Base URL:
-http://<100.53.32.83>:8081
+### 🌍 Backend Base URL:
 
-🔗 Frontend–Backend Integration
-React frontend communicates with Spring Boot backend via REST APIs
-CORS is enabled in backend to allow cross-origin requests from S3 hosted frontend
+http://100.53.32.83:8081
+
+------------------------------------------------------------------------
+
+## 🔗 Frontend--Backend Integration
+
+-   React frontend communicates with Spring Boot backend via REST APIs
+-   CORS is enabled in backend:
+
+``` java
 @CrossOrigin(origins = "*")
+```
 
-🔐 Security Considerations
-EC2 security groups configured to expose only required ports:
-8081 (Backend API)
-22 (SSH access)
-S3 bucket configured with public read access for static hosting only
+------------------------------------------------------------------------
 
-💡 Why AWS Deployment?
-Demonstrates real-world cloud deployment skills
-Separates frontend and backend (microservice-style architecture)
-Scalable and production-ready setup
-Aligns with industry DevOps practices
+## 🔐 Security Considerations
 
-📈 Future Improvements
-Add custom domain using Route 53
-Enable HTTPS using AWS CloudFront + ACM
-CI/CD pipeline using GitHub Actions
-Move database to AWS RDS for scalability
+-   EC2 Security Groups configured:
+    -   `8081` → Backend API
+    -   `22` → SSH access
+-   S3 bucket configured for public read access (static hosting only)
+
+------------------------------------------------------------------------
+
+## 💡 Why AWS Deployment?
+
+-   Real-world cloud deployment experience
+-   Separation of frontend and backend
+-   Scalable architecture
+-   Industry-standard DevOps practice
+
+------------------------------------------------------------------------
+
+## 📈 Future Improvements
+
+-   Custom domain using Route 53
+-   HTTPS via CloudFront + ACM
+-   CI/CD pipeline using GitHub Actions
+-   Database migration to AWS RDS
+
 
 🙌 Acknowledgements
 Built with 💙 using open-source tools, guided by educational passion and teamwork.
