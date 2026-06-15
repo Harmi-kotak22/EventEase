@@ -1,6 +1,6 @@
 # 🎉 EventEase
 
-**EventEase** is a full-stack web application built for event management in academic institutions. It streamlines event organization, registration, feedback collection, and communication between students and admins.
+**EventEase** is a full-stack web application built for event management in academic institutions. It streamlines event organization, registration, feedback collection, and communication between students and admins. The application is deployed using AWS cloud services, where the frontend is hosted on Amazon S3 static website hosting and the backend is deployed on an EC2 instance, forming a scalable and production-like cloud architecture with REST API integration between both layers.
 
 ---
 
