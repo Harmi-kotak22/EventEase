@@ -10,7 +10,7 @@ public class CorsConfig implements WebMvcConfigurer {
 
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:3000")
+                .allowedOrigins("http://eventease-frontend-xyz.s3-website-us-east-1.amazonaws.com")
                 // allow the headers your app actually sends
                 .allowedHeaders("Authorization", "Cache-Control", "Content-Type")
                 // let the client read back the Authorization header if you ever send it
